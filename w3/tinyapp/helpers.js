@@ -10,7 +10,7 @@ const findUserByEmail = function(email, users) {
 };
 
 //create a new user
-const newUser = function(email, hashed, users) {
+const newUser = function(email, password, users) {
   const userID = generateRandomString();
   const salt = bcrypt.genSaltSync(10);
   const hashedPassword = bcrypt.hashSync(password, salt);
